@@ -14,15 +14,20 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git url: "${REPO_URL}", branch: 'main'
-            }
-        }
+        // stage('Checkout') {
+        //     steps {
+        //         git url: "${REPO_URL}", branch: 'main'
+        //     }
+        // }
+
+        options (
+            skipDefaultCheckout()
+        )
 
         stage('Build') {
             steps {
                 echo 'Installing dependencies and building production artefact...'
+                git 'https://github.com/EuphosiouX/react-crud-app.git'
                 bat 'npm install'
                 bat 'npm run build'
 
