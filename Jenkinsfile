@@ -10,7 +10,6 @@ pipeline {
         BUILD_DIR = 'react-crud-app'
         SONAR_TOKEN = credentials('SONAR_TOKEN')
         SNYK_TOKEN = credentials('SNYK_TOKEN')
-        BUILD_VERSION = "${env.BUILD_NUMBER}"
     }
 
     stages {
@@ -25,9 +24,6 @@ pipeline {
                 echo 'Installing dependencies and building production artefact...'
                 bat 'npm install'
                 bat 'npm run build'
-
-                echo 'Archiving build artefact...'
-                archiveArtifacts artifacts: 'build/**/*.*', fingerprint: true
             }
         }
 
@@ -35,6 +31,7 @@ pipeline {
             steps {
                 echo 'Running Jest unit and integration tests...'
                 bat 'npm run test'
+                bat 'dir reports /s'
                 junit 'reports/test-result.xml'       
             }
         }
