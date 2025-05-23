@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="3" failures="0" errors="0" time="1.792">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T12:41:58" time="0.49" tests="1">
-    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.013">
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="1.787">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T13:23:06" time="0.537" tests="2">
+    <testcase classname=" renders Add Employee form" name=" renders Add Employee form" time="0.018">
+    </testcase>
+    <testcase classname=" shows error if fields are empty and form is submitted" name=" shows error if fields are empty and form is submitted" time="0.058">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T12:41:59" time="0.203" tests="2">
-    <testcase classname=" renders Add Employee form" name=" renders Add Employee form" time="0.008">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T13:23:07" time="0.155" tests="1">
+    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.003">
     </testcase>
-    <testcase classname=" shows error if fields are empty and form is submitted" name=" shows error if fields are empty and form is submitted" time="0.063">
+  </testsuite>
+  <testsuite name="Dashboard Component" errors="0" failures="0" skipped="0" timestamp="2025-05-23T13:23:07" time="0.131" tests="2">
+    <testcase classname="Dashboard Component renders Header and Table when not adding or editing" name="Dashboard Component renders Header and Table when not adding or editing" time="0.003">
+    </testcase>
+    <testcase classname="Dashboard Component displays employee data from localStorage if available" name="Dashboard Component displays employee data from localStorage if available" time="0.003">
     </testcase>
   </testsuite>
 </testsuites>

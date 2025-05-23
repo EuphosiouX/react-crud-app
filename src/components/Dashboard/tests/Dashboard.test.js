@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Dashboard from '../Dashboard/index';
+import Dashboard from '../index';
 
 // Mock child components
 jest.mock('../Header', () => () => <div data-testid="header" />);

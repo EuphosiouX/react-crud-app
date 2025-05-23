@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Add from './Add';
+import Add from '../Add';
 
 test('renders Add Employee form', () => {
   render(<Add employees={[]} setEmployees={() => {}} setIsAdding={() => {}} />);
