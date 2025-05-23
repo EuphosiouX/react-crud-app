@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'Node24'
-    }
-
     environment {
         REPO_URL = 'https://github.com/EuphosiouX/react-crud-app.git'
         BUILD_DIR = 'react-crud-app'
