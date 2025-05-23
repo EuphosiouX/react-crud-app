@@ -30,8 +30,9 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Running Jest unit and integration tests...'
-                bat 'npm run test -- --ci --reporters=default --reporters=jest-junit'
+                bat 'npm run test:ci'
+                bat 'dir reports /s'
+                junit 'reports/test-result.xml'
             }
         }
 

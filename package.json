@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --ci --reporters=default --reporters=jest-junit",
+    "test:ci": "react-scripts test --watchAll=false --coverage --testResultsProcessor=jest-junit",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -29,6 +29,18 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "test-result.xml"
   },
   "browserslist": {
     "production": [
