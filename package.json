@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --ci --watchAll=false --coverage --testResultsProcessor=jest-junit",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -31,6 +31,10 @@
       "text",
       "clover"
     ]
+  },
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "test-result.xml"
   },
   "eslintConfig": {
     "extends": [
