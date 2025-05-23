@@ -55,11 +55,10 @@ pipeline {
             steps {
                 echo 'Running security analysis using Snyk...'
                 withCredentials([string(credentialsId: 'SNYK_TOKEN', variable: 'SNYK_TOKEN')]) {
-                    bat '''
-                    npm install -g snyk
-                    snyk auth %SNYK_TOKEN%
-                    snyk test || exit 0
-                    '''
+                    bat 'npm install -g snyk'
+                    bat 'snyk auth %SNYK_TOKEN%'
+                    bat 'snyk test || exit 0'
+                    // bat 'type snyk-report.json'
                 }
             }
         }
