@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="5" failures="0" errors="0" time="1.813">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T12:08:17" time="0.496" tests="1">
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="1.793">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T12:13:22" time="0.491" tests="1">
     <testcase classname=" renders without crashing" name=" renders without crashing" time="0.013">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T12:08:18" time="0.193" tests="2">
-    <testcase classname=" renders Add Employee form" name=" renders Add Employee form" time="0.007">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T12:13:22" time="0.203" tests="2">
+    <testcase classname=" renders Add Employee form" name=" renders Add Employee form" time="0.008">
     </testcase>
-    <testcase classname=" shows error if fields are empty and form is submitted" name=" shows error if fields are empty and form is submitted" time="0.058">
+    <testcase classname=" shows error if fields are empty and form is submitted" name=" shows error if fields are empty and form is submitted" time="0.059">
     </testcase>
   </testsuite>
-  <testsuite name="Dashboard Component" errors="0" failures="0" skipped="0" timestamp="2025-05-23T12:08:18" time="0.133" tests="2">
+  <testsuite name="Dashboard Component" errors="0" failures="0" skipped="0" timestamp="2025-05-23T12:13:23" time="0.137" tests="2">
     <testcase classname="Dashboard Component renders Header and Table when not adding or editing" name="Dashboard Component renders Header and Table when not adding or editing" time="0.003">
     </testcase>
-    <testcase classname="Dashboard Component displays employee data from localStorage if available" name="Dashboard Component displays employee data from localStorage if available" time="0.002">
+    <testcase classname="Dashboard Component displays employee data from localStorage if available" name="Dashboard Component displays employee data from localStorage if available" time="0.003">
     </testcase>
   </testsuite>
 </testsuites>
