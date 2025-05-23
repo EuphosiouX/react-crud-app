@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="5" failures="0" errors="0" time="1.755">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T11:18:47" time="0.537" tests="2">
-    <testcase classname=" renders Add Employee form" name=" renders Add Employee form" time="0.019">
-    </testcase>
-    <testcase classname=" shows error if fields are empty and form is submitted" name=" shows error if fields are empty and form is submitted" time="0.057">
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="2.102">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T11:39:08" time="0.502" tests="1">
+    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.013">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T11:18:48" time="0.147" tests="1">
-    <testcase classname=" renders without crashing" name=" renders without crashing" time="0.003">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-05-23T11:39:09" time="0.481" tests="2">
+    <testcase classname=" renders Add Employee form" name=" renders Add Employee form" time="0.008">
+    </testcase>
+    <testcase classname=" shows error if fields are empty and form is submitted" name=" shows error if fields are empty and form is submitted" time="0.058">
     </testcase>
   </testsuite>
-  <testsuite name="Dashboard Component" errors="0" failures="0" skipped="0" timestamp="2025-05-23T11:18:48" time="0.134" tests="2">
+  <testsuite name="Dashboard Component" errors="0" failures="0" skipped="0" timestamp="2025-05-23T11:39:09" time="0.133" tests="2">
     <testcase classname="Dashboard Component renders Header and Table when not adding or editing" name="Dashboard Component renders Header and Table when not adding or editing" time="0.003">
     </testcase>
     <testcase classname="Dashboard Component displays employee data from localStorage if available" name="Dashboard Component displays employee data from localStorage if available" time="0.003">
