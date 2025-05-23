@@ -7,7 +7,6 @@ pipeline {
         SONAR_TOKEN = credentials('SONAR_TOKEN')
         SNYK_TOKEN = credentials('SNYK_TOKEN')
         BUILD_VERSION = "${env.BUILD_NUMBER}"
-        SONAR_TOKEN = credentials('SONAR_TOKEN')
     }
 
     stages {
