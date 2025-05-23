@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'Node24'
+        nodejs('24.1.0')
     }
 
     environment {
@@ -35,8 +35,7 @@ pipeline {
             steps {
                 echo 'Running Jest unit and integration tests...'
                 bat 'npm run test'
-                junit 'reports/test-result.xml'
-                
+                junit 'reports/test-result.xml'       
             }
         }
 
