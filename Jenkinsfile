@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    // tools {
+    //     nodejs 'Node24'
+    // }
+
     environment {
         REPO_URL = 'https://github.com/EuphosiouX/react-crud-app.git'
         BUILD_DIR = 'react-crud-app'
@@ -27,7 +31,6 @@ pipeline {
             }
         }
 
-
         stage('Test') {
             steps {
                 echo 'Running Jest unit and integration tests...'
@@ -36,7 +39,6 @@ pipeline {
                 
             }
         }
-
 
         stage('Code Quality') {
             steps {
