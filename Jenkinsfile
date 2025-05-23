@@ -7,7 +7,6 @@ pipeline {
 
     environment {
         REPO_URL = 'https://github.com/EuphosiouX/react-crud-app.git'
-        BUILD_DIR = 'react-crud-app'
         SONAR_TOKEN = credentials('SONAR_TOKEN')
         SNYK_TOKEN = credentials('SNYK_TOKEN')
     }
@@ -30,7 +29,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running Jest unit and integration tests...'
-                bat 'npm run test'
+                bat 'npm test'
                 bat 'dir reports /s'
                 junit 'reports/test-result.xml'       
             }
