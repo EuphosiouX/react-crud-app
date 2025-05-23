@@ -31,21 +31,14 @@
       "text",
       "clover"
     ],
-    "roots": [
-      "<rootDir>/src"
-    ],
     "testMatch": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
+        "<rootDir>/src/**/__tests__/**/*.[jt]s?(x)",
+        "<rootDir>/src/**/?(*.)+(spec|test).[jt]s?(x)"
     ]
   },
   "jest-junit": {
     "outputDirectory": "reports",
-    "outputName": "test-result.xml",
-    "testMatch": [
-        "<rootDir>/src/**/*.test.js",
-        "<rootDir>/src/**/*.test.jsx"
-    ]
+    "outputName": "test-result.xml"
   },
   "eslintConfig": {
     "extends": [
