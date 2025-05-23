@@ -40,14 +40,12 @@ pipeline {
                 echo 'Running code quality analysis with SonarCloud...'
                 withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
                     bat '''
-                    curl -o sonar.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.7.0.2747-windows.zip
-                    powershell -Command "Expand-Archive sonar.zip -Force"
-                    sonar-scanner-4.7.0.2747-windows\\bin\\sonar-scanner.bat ^
-                        -Dsonar.projectKey=EuphosiouX_react-crud-app ^
-                        -Dsonar.organization=euphosioux ^
-                        -Dsonar.sources=. ^
-                        -Dsonar.host.url=https://sonarcloud.io ^
-                        -Dsonar.login=%SONAR_TOKEN%
+                     if exist sonar-scanner (
+                        rmdir /s /q sonar-scanner
+                    )
+                    curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-windows.zip
+                    powershell -Command "Expand-Archive -Path sonar-scanner.zip -DestinationPath sonar-scanner -Force"
+                    sonar-scanner\\sonar-scanner-5.0.1.3006-windows\\bin\\sonar-scanner.bat -Dsonar.login=%SONAR_TOKEN%
                     '''
                 }
             }
