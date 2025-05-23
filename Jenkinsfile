@@ -14,10 +14,6 @@ pipeline {
         pollSCM('H/5 * * * *')
     }
 
-    options {
-        skipDefaultCheckout()
-    }
-
     stages {
         stage('Build') {
             steps {
