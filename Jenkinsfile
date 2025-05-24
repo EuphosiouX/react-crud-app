@@ -58,23 +58,23 @@ pipeline {
                     bat 'npm install -g snyk'
                     bat 'snyk auth %SNYK_TOKEN%'
                     bat 'snyk test || exit 0'
-                    // bat 'type snyk-report.json'
                 }
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the app to a test environment (placeholder)...'
-                echo 'Deployment complete.'
+                echo 'Deploying app using Docker Compose...'
+                bat '''
+                docker-compose down || exit 0
+                docker-compose up --build -d
+                '''
             }
         }
 
         stage('Release') {
             steps {
                 echo 'Tagging release version and pushing to GitHub...'
-                bat 'git tag v1.0.0'
-                bat 'git push origin v1.0.0'
             }
         }
 

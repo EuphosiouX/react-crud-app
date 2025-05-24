@@ -23,11 +23,11 @@ describe('Dashboard Component', () => {
     const mockData = [
       {
         id: 1,
-        firstName: 'John',
-        lastName: 'Doe',
-        email: 'john@example.com',
-        salary: '5000',
-        date: '2023-01-01',
+        firstName: 'Michael',
+        lastName: 'Christopher',
+        email: 'michael@example.com',
+        salary: '69420',
+        date: '2024-01-01',
       },
     ];
     localStorage.setItem('employees_data', JSON.stringify(mockData));
